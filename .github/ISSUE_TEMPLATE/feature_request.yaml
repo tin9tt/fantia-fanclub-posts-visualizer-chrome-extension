@@ -1,0 +1,43 @@
+name: Feature request
+description: 機能追加や改善提案を行う
+title: "[Feature] "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        機能提案ありがとうございます。
+        目的やユースケースをできるだけ詳しく記載してください。
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 解決したい課題
+      description: 現在どのような不便があるか
+      placeholder: |
+        一覧ページで投稿内容を判別しづらい
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 提案内容
+      description: どのような機能を追加したいか
+      placeholder: |
+        動画連動・音声連動以外のカテゴリにも色付きバッジを追加したい
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 代替案
+      description: 他に考えた方法があれば記載してください
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 補足情報
+      description: スクリーンショット・参考 URL・関連 issue など

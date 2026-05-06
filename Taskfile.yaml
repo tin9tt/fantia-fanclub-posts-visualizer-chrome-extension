@@ -1,0 +1,7 @@
+version: 3
+
+tasks:
+  default:
+    cmds:
+      - rm -f fantia_extension.zip
+      - zip -r fantia_extension.zip *.js *.css manifest.json

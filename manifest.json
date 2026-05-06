@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Fantia fanclub posts visualizer",
+  "version": "0.1.0",
+  "description": "https://fantia.jp/fanclubs/*/posts の投稿を見やすくする拡張機能",
+  "content_scripts": [
+    {
+      "matches": ["https://fantia.jp/fanclubs/545851/posts*"],
+      "js": ["content-script.js"],
+      "css": ["content-style.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [],
+  "host_permissions": ["https://fantia.jp/api/v1/posts/*"]
+}

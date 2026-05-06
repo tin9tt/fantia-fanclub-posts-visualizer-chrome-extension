@@ -1,0 +1,109 @@
+name: Bug report
+description: バグや不具合を報告する
+title: "[Bug] "
+labels:
+  - bug
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        不具合の報告ありがとうございます。
+        再現に必要な情報をできるだけ詳しく記載してください。
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 概要
+      description: どのような不具合が起きているか
+      placeholder: |
+        サムネイルが置き換わらない
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      description: 再現する手順を記載してください
+      placeholder: |
+        1. https://fantia.jp/fanclubs/.../posts を開く
+        2. ページをスクロールする
+        3. サムネイルが表示されない
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待される動作
+      placeholder: |
+        投稿内の画像がサムネイルとして表示される
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 実際の動作
+      placeholder: |
+        no image のまま表示される
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: ブラウザ
+      description: 使用しているブラウザを選択してください
+      options:
+        - Google Chrome
+        - Microsoft Edge
+        - Brave
+        - Vivaldi
+        - Arc
+        - Opera
+        - その他 Chromium 系
+    validations:
+      required: true
+
+  - type: input
+    id: browser-version
+    attributes:
+      label: ブラウザバージョン
+      placeholder: "例: 136.0.7103.93"
+    validations:
+      required: false
+
+  - type: input
+    id: extension-version
+    attributes:
+      label: 拡張機能バージョン
+      placeholder: "例: 0.1.0"
+    validations:
+      required: false
+
+  - type: textarea
+    id: console
+    attributes:
+      label: Console ログ
+      description: DevTools Console にエラーや warning があれば貼り付けてください
+      render: text
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: スクリーンショット
+      description: 必要に応じて画像を貼り付けてください
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 補足情報
+      description: 関連 issue、発生頻度、気づいたことなどがあれば記載してください
+    validations:
+      required: false

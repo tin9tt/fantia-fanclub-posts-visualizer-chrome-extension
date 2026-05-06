@@ -1,0 +1,82 @@
+.fantia-post-enhancer-thumbnail-container {
+  position: relative !important;
+  overflow: visible !important;
+}
+
+.fantia-post-enhancer-type-badge {
+  position: absolute !important;
+  right: 8px !important;
+  bottom: 8px !important;
+  left: auto !important;
+  top: auto !important;
+  z-index: 10 !important;
+
+  width: 28px !important;
+  height: 28px !important;
+  min-width: 28px !important;
+  min-height: 28px !important;
+  max-width: 28px !important;
+  max-height: 28px !important;
+
+  border-radius: 999px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  box-sizing: border-box !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height: 1 !important;
+
+  pointer-events: none !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35) !important;
+  transform: none !important;
+}
+
+.fantia-post-enhancer-type-badge[data-fantia-post-enhancer-type="audio"] {
+  background: #1e3a8a !important; /* blue-900 */
+  color: #93c5fd !important; /* blue-300 */
+}
+
+.fantia-post-enhancer-type-badge[data-fantia-post-enhancer-type="video"] {
+  background: #581c87 !important; /* purple-900 */
+  color: #d8b4fe !important; /* purple-300 */
+}
+
+.fantia-post-enhancer-type-badge svg {
+  display: block !important;
+
+  width: 16px !important;
+  height: 16px !important;
+  min-width: 16px !important;
+  min-height: 16px !important;
+  max-width: 16px !important;
+  max-height: 16px !important;
+
+  margin: auto !important;
+  padding: 0 !important;
+
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+
+  transform: translate(0, 0) !important;
+  transform-origin: center center !important;
+
+  color: inherit !important;
+  fill: currentColor !important;
+  flex-shrink: 0 !important;
+}
+
+.fantia-post-enhancer-type-badge svg path {
+  fill: currentColor !important;
+}
+
+.fantia-post-enhancer-replaced-thumbnail {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
