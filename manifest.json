@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Fantia fanclub posts visualizer",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "https://fantia.jp/fanclubs/*, https://fantia.jp/fanclubs/*/posts の投稿を見やすくする拡張機能",
   "content_scripts": [
     {
