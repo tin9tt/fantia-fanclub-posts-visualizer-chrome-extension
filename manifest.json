@@ -9,8 +9,8 @@
         "https://fantia.jp/fanclubs/545851",
         "https://fantia.jp/fanclubs/545851/posts*"
       ],
-      "js": ["content-script.js"],
-      "css": ["content-style.css"],
+      "js": ["index.js"],
+      "css": ["index.css"],
       "run_at": "document_idle"
     }
   ],
