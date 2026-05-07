@@ -2,7 +2,7 @@
 
 ## 0. Abstract/Summary
 
-この DesignDoc は、`https://fantia.jp/fanclubs/*/posts` 専用の Chrome 拡張機能について記述する。
+この DesignDoc は、`https://fantia.jp/fanclubs/*`・`https://fantia.jp/fanclubs/*/posts` 専用の Chrome 拡張機能について記述する。
 
 対象ページはコンテンツ一覧ページであり、各コンテンツは `class="module post post-md-square"` を持つ `div` として表示される。各コンテンツ要素は、サムネイル、タイトル、本文概要、メタ情報、投稿詳細へのリンクを含む。
 
