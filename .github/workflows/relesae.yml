@@ -1,0 +1,66 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate files
+        run: |
+          test -f manifest.json
+          test -f index.js
+          test -f index.css
+          test -f PRIVACY_POLICY.md
+          test -d assets
+
+      - name: Create extension package
+        run: |
+          zip -r extension.zip \
+            manifest.json \
+            index.js \
+            index.css
+
+      - name: Create assets package
+        run: |
+          zip -r assets.zip assets
+
+      - name: Extract release note from tag commit
+        id: release_note
+        run: |
+          COMMIT_MESSAGE="$(git log -1 --format=%B)"
+
+          RELEASE_BODY="$(
+            printf '%s\n' "$COMMIT_MESSAGE" \
+              | tail -n +3 \
+              | sed 's/^\\## /## /'
+          )"
+
+          {
+            echo 'body<<EOF'
+            echo "$RELEASE_BODY"
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          body: ${{ steps.release_note.outputs.body }}
+          files: |
+            PRIVACY_POLICY.md
+            extension.zip
+            assets.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

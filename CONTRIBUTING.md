@@ -65,7 +65,7 @@ task
 Generated package:
 
 ```txt
-fantia_extension.zip
+extension.zip
 ```
 
 ## Deploy
@@ -79,7 +79,7 @@ fantia_extension.zip
 - Open the [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/devconsole/)
 - Select the extension
 - Open the [Build] > [Package] tab
-- Upload `fantia_extension.zip` using "Upload new package"
+- Upload `extension.zip` using "Upload new package"
 
 ## Style guidelines
 
